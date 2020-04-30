@@ -1,6 +1,7 @@
 package application;
 
 import java.net.URL;
+
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -78,56 +79,28 @@ public class FXMLController implements Initializable{
     	if(value2.equals("") && operating==false) {
     		inputDisplay.setText(value1);
     	}
-    	else if(operating == true && operator.equals("log")) {
-    		try {
-    			double v1 = Double.parseDouble(value1);
-    			value1 = String.valueOf(Math.log(v1));
-    			value2 = "";
-		    	operating = false;
-		    	operator = "";
-		    	inputDisplay.setText(value1);
-    		}
-    		catch(Exception e) {
-    			value1="";
-	    		value2="";
-	    		operator="";
-	    		operating=false;
-	    		inputDisplay.setText("ERROR");
-    		}
-    	}
     	else {
 	    	try {
 		    	double v1 = Double.parseDouble(value1);
 		    	double v2 = Double.parseDouble(value2);
-		    	if(operator.equals("+")) {
-		    		value1 = String.valueOf(v1+v2);
+		    	CalculatorModel m = new CalculatorModel(v1, v2, operator);
+		    	value1 = m.calculate();
+		    	if(value1 == ""){
+		    		throw new Exception();
 		    	}
-		    	else if(operator.equals("-")) {
-		    		value1 = String.valueOf(v1-v2);
-		    	}
-		    	else if(operator.equals("/")) {
-		    		if(v2 == 0) {
-		    			throw new Exception();
-		    		}
-		    		value1 = String.valueOf(v1/v2);
-		    	}
-		    	else if(operator.equals("*")) {
-		    		value1 = String.valueOf(v1*v2);
-		    	}
-		    	value2 = "";
-		    	operating = false;
-		    	operator = "";
 		    	inputDisplay.setText(value1);
 	    	}
 	    	catch(Exception e) {
 	    		value1="";
-	    		value2="";
-	    		operator="";
-	    		operating=false;
 	    		inputDisplay.setText("ERROR");
 	    	}
+	    	value2 = "";
+	    	operating = false;
+	    	operator = "";
     	}
     }
+
+
     
     @FXML
     void inputOne(ActionEvent event) {

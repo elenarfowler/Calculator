@@ -20,7 +20,7 @@
       <Button fx:id="eight" layoutX="75.0" layoutY="236.0" mnemonicParsing="false" onAction="#inputEight" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: navy;" text="8" textFill="WHITE" />
       <Button fx:id="zero" layoutX="2.0" layoutY="301.0" mnemonicParsing="false" onAction="#inputZero" prefHeight="65.0" prefWidth="148.0" style="-fx-background-color: navy;" text="0" textFill="WHITE" />
       <Button fx:id="nine" layoutX="150.0" layoutY="236.0" mnemonicParsing="false" onAction="#inputNine" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: navy;" text="9" textFill="WHITE" />
-      <Button fx:id="enter" layoutX="151.0" layoutY="366.0" mnemonicParsing="false" onAction="#enter" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: #e7e7e7;" text="Enter" />
+      <Button fx:id="enter" layoutX="151.0" layoutY="366.0" mnemonicParsing="false" onAction="#enter" prefHeight="65.0" prefWidth="154.0" style="-fx-background-color: #e7e7e7;" text="Enter" />
       <Button fx:id="multiply" layoutX="225.0" layoutY="171.0" mnemonicParsing="false" onAction="#multiply" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: lightblue;" text="x" />
       <Button fx:id="plus" layoutX="225.0" layoutY="301.0" mnemonicParsing="false" onAction="#add" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: lightblue;" text="+" />
       <Button fx:id="minus" layoutX="225.0" layoutY="236.0" mnemonicParsing="false" onAction="#subtract" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: lightblue;" text="-" />
@@ -31,6 +31,5 @@
          <font>
             <Font name="SansSerif Regular" size="28.0" />
          </font></Label>
-      <Button fx:id="log" layoutX="225.0" layoutY="366.0" mnemonicParsing="false" onAction="#log" prefHeight="65.0" prefWidth="75.0" style="-fx-background-color: lightblue;" text="log" />
    </children>
 </Pane>
